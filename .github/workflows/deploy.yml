@@ -25,11 +25,10 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            bash -l -c '
-            cd /home/yourusername/public_html/zigguratss
+            cd /home/vpsziggu/www/app.zigguratss.com/zigguratss
             git fetch origin
-            git checkout master
-            git pull origin master
+            git checkout ${{ github.event.inputs.branch }}
+            git pull origin ${{ github.event.inputs.branch }}
             npm install
             npm run build
-            '
+
