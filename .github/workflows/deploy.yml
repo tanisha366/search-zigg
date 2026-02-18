@@ -25,12 +25,10 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            export PATH=$PATH:/opt/cpanel/ea-nodejs20/bin
-
-            cd /home/***/www/app.zigguratss.com/zigguratss
+            bash -l -c '
+            cd /home/yourusername/public_html/zigguratss
             git fetch origin
             git checkout master
             git pull origin master
             npm install
             npm run build
-            # sudo systemctl restart nginx
