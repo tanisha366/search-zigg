@@ -29,8 +29,10 @@ jobs:
             git fetch origin
             git checkout ${{ github.event.inputs.branch }}
             git pull origin ${{ github.event.inputs.branch }}
-            npm install
+
+            npm ci
             npm run build
-            rm -rf assets node_modules src public
+
+            rm -rf index.html assets
             cp -r dist/* .
 
