@@ -1,11 +1,13 @@
-import Main from "./pages/main";
-import SplashCursor from "./components/splash";
+import React from 'react'
+import Search from './components/Search'
+import './styles/App.css'
+
 function App() {
   return (
-    <>
-      <SplashCursor />
-      <Main></Main>
-    </>
-  );
+    <div className="app">
+      <Search />
+    </div>
+  )
 }
-export default App;
+
+export default App

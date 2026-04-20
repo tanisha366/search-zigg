@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&display=swap');
+
+.pageShell {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(247, 238, 228, 0.9), transparent 35%),
+    radial-gradient(circle at 8% 6%, rgba(243, 232, 220, 0.6), transparent 30%),
+    #f8f5f1;
+  color: #111;
+  font-family: 'Inter', sans-serif;
+}
+
+.headerWrap {
+  background: #f3f3f3;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.topRow {
+  max-width: 1560px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 28px 10px;
+}
+
+.brandTitle {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: #0f0f0f;
+  text-transform: lowercase;
+}
+
+.searchBar {
+  height: 44px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px 0 14px;
+  border: 1px solid #d8d8d8;
+  border-radius: 999px;
+  background: #e9e9eb;
+}
+
+.searchIcon {
+  width: 18px;
+  height: 18px;
+  color: #4a4a4a;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #222;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1;
+  width: 100%;
+}
+
+.searchInput::placeholder {
+  color: #5f5f5f;
+  opacity: 1;
+}
+
+.cameraButton {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: #1b1b1b;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.cameraButton svg {
+  width: 18px;
+  height: 18px;
+}
+
+.hiddenFileInput {
+  display: none;
+}
+
+.cameraHint {
+  margin: 6px 12px 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.navBar {
+  max-width: 1560px;
+  margin: 0 auto;
+  padding: 10px 28px 12px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-top: 1px solid #dfdfdf;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.navBar::-webkit-scrollbar {
+  height: 4px;
+}
+
+.navBar::-webkit-scrollbar-thumb {
+  background: #d0d0d0;
+}
+
+.navLink,
+.promoLink {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #131313;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.navLink:hover,
+.promoLink:hover {
+  opacity: 0.75;
+}
+
+.promoLink {
+  color: #f04e3e;
+}
+
+.navCaret {
+  font-size: 10px;
+  line-height: 1;
+  margin-top: 1px;
+  color: #444;
+}
+
+.navIcons {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.navIconButton {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: #6c6c6c;
+  display: inline-grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.navIconButton svg {
+  width: 19px;
+  height: 19px;
+}
+
+.emptySpace {
+  min-height: calc(100vh - 148px);
+}
+
+@media (max-width: 1280px) {
+  .brandTitle {
+    font-size: 35px;
+  }
+
+  .searchInput {
+    font-size: 15px;
+  }
+
+  .navLink,
+  .promoLink {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .topRow {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 12px 12px 10px;
+  }
+
+  .brandTitle {
+    font-size: 32px;
+  }
+
+  .searchBar {
+    height: 42px;
+    padding: 0 10px;
+  }
+
+  .searchInput {
+    font-size: 14px;
+  }
+
+  .navBar {
+    gap: 14px;
+    padding: 10px 12px 10px;
+  }
+
+  .navLink,
+  .promoLink {
+    font-size: 14px;
+  }
+
+  .navIconButton {
+    width: 26px;
+    height: 26px;
+  }
+
+  .navIconButton svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .emptySpace {
+    min-height: calc(100vh - 140px);
+  }
+}
+
+@media (max-width: 600px) {
+  .topRow {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .brandTitle {
+    font-size: 28px;
+  }
+
+  .searchBar {
+    height: 40px;
+    padding: 0 9px;
+    border-radius: 14px;
+  }
+
+  .searchIcon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .searchInput {
+    font-size: 13px;
+  }
+
+  .cameraButton {
+    width: 24px;
+    height: 24px;
+  }
+
+  .cameraButton svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .cameraHint {
+    margin: 5px 8px 0;
+    font-size: 11px;
+  }
+
+  .navBar {
+    gap: 12px;
+    padding: 8px 10px 10px;
+  }
+
+  .navLink,
+  .promoLink {
+    font-size: 13px;
+  }
+
+  .navIcons {
+    gap: 8px;
+  }
+
+  .emptySpace {
+    min-height: calc(100vh - 130px);
+  }
+}
+
+@media (max-width: 420px) {
+  .brandTitle {
+    font-size: 24px;
+  }
+
+  .searchBar {
+    height: 38px;
+    gap: 6px;
+  }
+
+  .searchInput {
+    font-size: 12px;
+  }
+
+  .navLink,
+  .promoLink {
+    font-size: 12px;
+  }
+
+  .navIcons {
+    gap: 6px;
+  }
+}
